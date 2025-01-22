@@ -3,7 +3,7 @@
 #include <iostream>
 #include <windows.h>
 #include <string>
-#include "class.h"
+#include "group.h"
 #include "teacher.h"
 
 using namespace std;
@@ -15,14 +15,19 @@ const int TEACHERS_NUM = 15;
 class School
 {
 public:
+    int count_teachers = 0;
+    int count_groups = 0;
+
     School(int number);
 
     int school_number;
-    Class group[GROUP_SIZE];
-    Teacher teacher[TEACHERS_NUM];
+    Group groups[GROUP_SIZE];
+    Teacher teachers[TEACHERS_NUM];
 
     void PrintClasses();
     void PrintTeachers();
+    void AddGroup(Group gr);
+    void AddTeacher(Teacher t);
 };
 
 #endif

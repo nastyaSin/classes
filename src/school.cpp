@@ -1,22 +1,34 @@
 #include "school.h"
 
-School::School(int number)
+void School::AddGroup(Group gr)
 {
-    school_number = number;
+    groups[count_groups] = gr;
+    count_groups++;
+}
+
+void School::AddTeacher(Teacher t)
+{
+    teachers[count_teachers] = t;
+    count_teachers++;
 }
 
 void School::PrintClasses()
 {
     for (int i = 0; i < GROUP_SIZE; i++)
     {
-        cout << group[i].class_number << endl;
+        cout << groups[i].class_number << endl;
     }
 }
 
-void School::PrintClasses()
+void School::PrintTeachers()
 {
     for (int i = 0; i < TEACHERS_NUM; i++)
     {
-        cout << teacher[i].name << endl;
+        cout << teachers[i].name << endl;
     }
+}
+
+School::School(int number)
+{
+    school_number = number;
 }

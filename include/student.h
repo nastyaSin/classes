@@ -3,7 +3,7 @@
 #include <iostream>
 #include <windows.h>
 #include <string>
-#include "class.h"
+
 
 using namespace std;
 
